@@ -73,18 +73,6 @@ variable "akv_key_sequence_number" {
   default     = ""
 }
 
-variable "ip_rules" {
-  type        = list
-  description = "(Optional) The ranges of IPs to can access Key Vault"
-  default = []
-}
-
-variable "virtual_network_subnet_ids" {
-  type        = list
-  description = "(Required) The Azure subnets that can access Key Vault"
-  default = []
-}
-
 variable "delete_retention_days" {
   type        = number
   description = "(Optional) Specifies the number of days that the blob should be retained, between 1 and 365 days. Defaults to 7"
@@ -94,11 +82,13 @@ variable "delete_retention_days" {
 variable "sta_tier" {
   type        = string
   description = "(Required) Storage account tier. Possible values: standard."
+  default = "standard"
 }
 
 variable "sta_replication" {
   type        = string
   description = "(Required) Storage account replication policy. Possible values: LRS, GRS, RAGRS or ZRS "
+  default = "LRS
 }
 
 variable "location" {

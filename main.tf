@@ -88,7 +88,7 @@ variable "sta_tier" {
 variable "sta_replication" {
   type        = string
   description = "(Required) Storage account replication policy. Possible values: LRS, GRS, RAGRS or ZRS "
-  default = "LRS
+  default = "LRS"
 }
 
 variable "location" {
